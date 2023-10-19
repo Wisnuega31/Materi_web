@@ -102,3 +102,25 @@ Route::get('latihan/diskon',function(){
 
     return view('latihan.diskon',['bayar' => $bayar,'diskon' => $diskon, 'total_bayar' => $total_bayar]);
 });
+
+
+//akhir pertemuan 1
+
+
+Route::get('/', function () {
+    $siswa = [
+        ['nama'=>'Fitriyan', 'kelas'=>11, 'jurusan'=>'RPL'],
+        ['nama'=>'Ageng', 'kelas'=>12, 'jurusan'=>'TKRO'],
+        ['nama'=>'Sholeh', 'kelas'=>12, 'jurusan'=>'TP'],
+        ['nama'=>'Irawan', 'kelas'=>12, 'jurusan'=>'AK']
+    ];
+    return view('pertemuan2.layout',['siswa' =>$siswa]);
+});
+
+Route::get('kelas', function () {
+    return view('pertemuan2.kelas');
+});
+
+Route::get('jurusan', function () {
+    return view('pertemuan2.jurusan');
+});
